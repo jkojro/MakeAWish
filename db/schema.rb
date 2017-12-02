@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171202173746) do
+ActiveRecord::Schema.define(version: 20171202193625) do
+
+  create_table "querries", force: :cascade do |t|
+    t.text     "question"
+    t.string   "answer"
+    t.text     "tip"
+    t.integer  "wish_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["wish_id"], name: "index_querries_on_wish_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

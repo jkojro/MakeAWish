@@ -6,7 +6,7 @@
 
 <%= link_to 'My Wish List', home_wishlist_path %>
 
-<h1>Wishes</h1>
+<h1>My Wishes</h1>
 
 <table>
   <thead>
@@ -22,9 +22,6 @@
   <tbody>
     <% @wishes.each do |wish| %>
       <tr>
-        	<td><%= wish.name %></td>
-			<td><%= wish.reciever %></td>
-			<td><%= wish.user_id %></td>
 			<% if (wish.user == current_user) %>
 				<td><%= wish.mywish %></td>
         		<td><%= link_to 'Show', wish %></td>
@@ -35,8 +32,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Wish', new_wish_path %>
 

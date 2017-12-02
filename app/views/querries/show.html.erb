@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @querry.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @querry.answer %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @querry.tip %>
+</p>
+
+<p>
+  <strong>Wish:</strong>
+  <%= @querry.wish_id %>
+</p>
+
+<%= link_to 'Edit', edit_querry_path(@querry) %> |
+<%= link_to 'Back', querries_path %>

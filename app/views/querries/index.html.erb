@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Querries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Tip</th>
+      <th>Wish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @querries.each do |querry| %>
+      <tr>
+        <td><%= querry.question %></td>
+        <td><%= querry.answer %></td>
+        <td><%= querry.tip %></td>
+        <td><%= querry.wish_id %></td>
+        <td><%= link_to 'Show', querry %></td>
+        <td><%= link_to 'Edit', edit_querry_path(querry) %></td>
+        <td><%= link_to 'Destroy', querry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Querry', new_querry_path %>
