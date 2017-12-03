@@ -14,6 +14,8 @@ class WishesController < ApplicationController
   # GET /wishes/1
   # GET /wishes/1.json
   def show
+      @querry = Querry.new
+      @querry.wish_id = @wish.id
   end
 
   # GET /wishes/new

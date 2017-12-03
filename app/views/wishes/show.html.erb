@@ -12,3 +12,9 @@
 
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 <%= link_to 'Back', wishes_path %>
+
+
+<h3>Pytania</h3>
+<%= render partial: 'querries/form' %>
+
+<%= render partial: 'wishes/querry', collection: @wish.querries %>

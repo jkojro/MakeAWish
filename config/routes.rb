@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :wishes
+  
+  resources :wishes do
+      resources :querries
+  end
+ 
   devise_for :users
   root 'home#index'
   get 'home/wishlist'
