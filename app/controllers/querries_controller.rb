@@ -15,6 +15,7 @@ class QuerriesController < ApplicationController
   # GET /querries/new
   def new
     @querry = Querry.new
+
   end
 
   # GET /querries/1/edit

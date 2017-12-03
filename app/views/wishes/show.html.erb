@@ -10,5 +10,12 @@
   <%= @wish.mywish %>
 </p>
 
-<%= link_to 'Edit', edit_wish_path(@wish) %> |
+<%= link_to 'Edit', edit_wish_path(@wish) %> 
+
+<%= render partial: 'querries/form' %>
 <%= link_to 'Back', wishes_path %>
+
+<%= link_to 'Make your Wish fly', new_querry_path %>
+
+<h3>Querries</h3>
+<%= render partial: 'home/querry', collection: @wish.querries %>
