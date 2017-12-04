@@ -14,7 +14,9 @@
 <%= link_to 'Back', wishes_path %>
 
 
-<h3>Pytania</h3>
+<h3>Dodaj pytanie</h3>
 <%= render partial: 'querries/form' %>
+
+<h3>Masz <%= @wish.querries.size %> pytania</h3>
 
 <%= render partial: 'wishes/querry', collection: @wish.querries %>
