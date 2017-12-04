@@ -1,5 +1,8 @@
 <div>
   <h4>Pytanie: <%= querry.question %></h4>
-  <p>Odpowiedź: <%= querry.answer %></p>
-  <p>Tip: <%= querry.tip %></p>
+    <% if (@wish.user == current_user) %>
+  		<p>Odpowiedź: <%= querry.answer %></p>
+	<% end %>
+  	  	<p>Tip: <%= querry.tip %></p>
+		
 </div>
