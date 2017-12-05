@@ -1,12 +1,14 @@
 
 
-ActiveRecord::Schema.define(version: 20171205162223) do
+ActiveRecord::Schema.define(version: 20171205162733) do
 
   create_table "myanswers", force: :cascade do |t|
     t.string   "reply"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "querry_id"
+    t.index ["querry_id"], name: "index_myanswers_on_querry_id"
     t.index ["user_id"], name: "index_myanswers_on_user_id"
   end
 
