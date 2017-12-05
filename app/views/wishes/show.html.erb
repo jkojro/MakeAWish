@@ -16,6 +16,8 @@ Wish user name: <%= @wish.user.name %>
 <h3>Dodaj pytanie</h3>
 <%= render partial: 'querries/form' %>
 
+
+
 <h3>Masz <%= @wish.querries.size %> pytania</h3>
 
 	<% end %>
@@ -23,5 +25,7 @@ Wish user name: <%= @wish.user.name %>
 <%= render partial: 'wishes/querry', collection: @wish.querries %>
 
 <%= link_to 'Back', wishes_path %>
+
+
 		  
         	

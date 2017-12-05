@@ -5,6 +5,10 @@
     <%= f.label :question, "Twoje pytanie" %><br/>
     <%= f.text_area :question %>
   </p>
+  <p>
+	  <%= render partial: 'querries/answerform' %>
+	  <%= render partial: 'wishes/answer' %>
+  </p>	  
   	<p>
    	 <%= f.label :answer, "Twoja odpowiedź" %><br/>
    	 <%= f.text_field :answer %>

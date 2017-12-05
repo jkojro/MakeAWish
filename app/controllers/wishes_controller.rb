@@ -16,6 +16,9 @@ class WishesController < ApplicationController
   def show
       @querry = Querry.new
       @querry.wish_id = @wish.id
+      
+      @myanswer = Myanswer.new
+      @myanswer.querry_id = @querry.id
   end
 
   # GET /wishes/new
