@@ -1,2 +1,13 @@
 <h3>Twój strzał</h3>
 <p> Tu będzie formularz</p>
+
+
+<%= form_for [ @wish, querry, @myanswer ] do |f| %>
+  <p>
+    <%= f.label :reply %><br/>
+    <%= f.text_field :reply %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

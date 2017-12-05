@@ -14,9 +14,9 @@ Wish user name: <%= @wish.user.name %>
 <%= link_to 'Edit', edit_wish_path(@wish) %> |
 
 <h3>Dodaj pytanie</h3>
-<%= render partial: 'querries/form' %>
 
 
+<%= render partial: 'querries/grupowy' %>
 
 <h3>Masz <%= @wish.querries.size %> pytania</h3>
 

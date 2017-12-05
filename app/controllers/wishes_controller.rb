@@ -17,8 +17,12 @@ class WishesController < ApplicationController
       @querry = Querry.new
       @querry.wish_id = @wish.id
       
+     
+      
       @myanswer = Myanswer.new
-      @myanswer.querry_id = @querry.id
+      @zm = @wish.querries
+      
+      @myanswer.user_id = current_user.id
   end
 
   # GET /wishes/new
