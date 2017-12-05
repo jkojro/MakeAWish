@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
         
          has_many :wishes
+         has_one :myanswers
 end
