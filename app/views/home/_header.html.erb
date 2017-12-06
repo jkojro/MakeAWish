@@ -1,4 +1,6 @@
-
+<% if current_user != nil %>
+	Użytkownik: <%= current_user.name%>
+<% end %>
 
 <%= link_to "Od początku", root_path %>
 <%= link_to "My Wishes", wishes_path %>

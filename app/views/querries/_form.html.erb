@@ -1,4 +1,4 @@
-<h3>Post a Comment</h3>
+<h3>Dodaj pytanie</h3>
 
 <%= form_for [ @wish, @querry ] do |f| %>
   <p>
@@ -11,10 +11,10 @@
 	</p>
 
 	<p>
-   	 <%= f.label :tip, "Daj wskazówkę" %><br/>
+   	 <%= f.label :tip, "Zostaw Mikołajowi wskazówkę" %><br/>
     	<%= f.text_area :tip%>
   	</p>
   	<p>
-   	 <%= f.submit 'Submit' %>
+   	 <%= f.submit 'Wrzucaj' %>
   	</p>
 <% end %>

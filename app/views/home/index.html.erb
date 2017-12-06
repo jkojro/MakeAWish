@@ -1,11 +1,12 @@
 <h1>Make a wish</h1>
-<p>Daj się poznać</p>
 
 <% if user_signed_in? %>
 <p>Jestem Świętym Mikołajem -> <%= link_to "Find a Wish", wishes_path%></p>
 <p>Chcę pomóc Świętemu Mikołajowi -> <%= link_to "Make a Wish", new_wish_path%></p>
 
 <% else %>
+
+<p>Daj się poznać</p>
 
 <%= link_to "Zaloguj się", new_user_session_path %>
 

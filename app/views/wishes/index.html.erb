@@ -1,32 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Wishes</h1>
+<h2><%= link_to 'Lista Wishy', home_wishlist_path %></h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>My Wish</th>
-	  <th>Reciever</th>
-	  <th>user id</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @wishes.each do |wish| %>
       <tr>
-		<% if ((wish.user == current_user) || (wish.reciever == current_user.name) || (wish.reciever == current_user.fbname) || (wish.reciever == nil) ) %>  
-        	<td><%=link_to wish.name, wish_path(wish) %></td>
-			<td><%= wish.reciever %></td>
-			<td><%= wish.user_id %></td>
-			<% if (wish.user == current_user) %>
-				<td><%= wish.mywish %></td>
-        		<td><%= link_to 'Show', wish %></td>
-        		<td><%= link_to 'Edit', edit_wish_path(wish) %></td>
-        		<td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			<% end %>
-		<% end %>
+        	<td><%= link_to wish.name, wish %></td>
+			<% if (wish.reciever == current_user) %>
+			
+			<% end %>	
       </tr>
     <% end %>
   </tbody>

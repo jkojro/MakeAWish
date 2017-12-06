@@ -1,26 +1,21 @@
 <p id="notice"><%= notice %></p>
-Wish user name: <%= @wish.user.name %>
+<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, żeby Mikołaj nie miał zdbyt łatwo.</h3>
 
 <% if ((@wish.user == current_user) || (@wish.reciever == current_user.name) || (@wish.reciever == current_user.fbname) || (wish.reciever == nil) ) %>
-	<p>
-  	  <strong>Name:</strong>
-  	<%= @wish.name %>
-	</p>
+
 	<% if (@wish.user == current_user) %>
 		<p>
-  		  <strong>Mywish:</strong>
+  		  <strong>Wish:</strong>
   			<%= @wish.mywish %>
+			<%= link_to 'Edit', edit_wish_path(@wish) %>
 		</p>
-<%= link_to 'Edit', edit_wish_path(@wish) %> |
-
-<h3>Dodaj pytanie</h3>
-
+		
+<h3>Masz <%= @wish.querries.size %> pytania</h3>		
 
 <%= render partial: 'querries/form' %>
 
 <%= render partial: 'wishes/querry', collection: @wish.querries %>
 
- <%= render partial: 'querries/answer' %>
 
 <h3>Masz <%= @wish.querries.size %> pytania</h3>
 
