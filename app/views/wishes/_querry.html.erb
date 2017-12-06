@@ -1,11 +1,10 @@
+<% @querry.id = querry.id %>
 <div>
   <h4>Pytanie: <%= querry.question %></h4>
     <% if (@wish.user == current_user) %>
   		<p>Odpowiedź: <%= querry.answer %></p>
-	<% end %>
-  	  	<p>Tip: <%= querry.tip %></p>
-
-		<% @querry.id = querry.id %>
+		<p>Tip: <%= querry.tip %></p>
+	<% else %>	
 
 		<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
 		  <p>
@@ -17,7 +16,19 @@
 		    <%= f.submit 'Strzelaj' %>
 		  </p>
 		<% end %>
+
+		<% @querry.myanswers.each do |myanswer| %>
 		
-<%= render partial: 'querries/myanswer', collection: @querry.myanswers %>		
+			<p>Twój strzał: <%= myanswer.reply %></p>
+
+		    <% if (querry.answer == myanswer.reply) %>
+				<p>Brawo! Oto twoja wskazówka: <%= querry.tip %></p>
+			<% end %>
+		<% end %>
+	<% end %>
+		
+<!-- <%= render partial: 'querries/myanswer', collection: @querry.myanswers %> -->
+		
+	
 			
 </div>

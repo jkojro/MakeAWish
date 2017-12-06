@@ -1,8 +1,9 @@
+<p><h1><%= link_to "Make a wish", root_path %></h1>
+
 <% if current_user != nil %>
-	Użytkownik: <%= current_user.name%>
+	Użytkownik: <%= link_to current_user.name, edit_user_registration_path %>
 <% end %>
 
 <%= link_to "Od początku", root_path %>
-<%= link_to "My Wishes", wishes_path %>
-<%= link_to "Edytuj profil", edit_user_registration_path %>
 <%= link_to "Wyloguj się", destroy_user_session_path, method: :delete %>
+</p>

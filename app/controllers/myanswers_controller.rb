@@ -8,7 +8,7 @@ class MyanswersController < ApplicationController
       @myanswer = Myanswer.new(myanswer_params)
         @myanswer.querry_id = params[:querry_id]
         
-            @myanswer.user_id = current_user.id
+        @myanswer.user_id = current_user.id
            
     
         @myanswer.save

@@ -1,2 +1,12 @@
-<h4>Twój strzał: <%= myanswer.reply %></h4>
+<p>Twój strzał: <%= myanswer.reply %></p>
+
+<p>Wish.user:<%= @querry.tip %></p>
+
+
+<p>answer : <%= @querry.answer %></p>
+reply: <%= myanswer.reply %>
+
+    <% if (@querry.answer == myanswer.reply) %>
+		<p>Brawo! Oto twoja wskazówka: <%= querry.tip %></p>
+	<% end %>	
 

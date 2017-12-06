@@ -6,9 +6,8 @@
   <tbody>
     <% @wishes.each do |wish| %>
       <tr>
-        	<td><%= link_to wish.name, wish %></td>
-			<% if (wish.reciever == current_user) %>
-			
+			<% if ((wish.reciever == current_user.name) || (wish.reciever == current_user.fbname)) %>
+				<td><%= link_to wish.name, wish %></td>
 			<% end %>	
       </tr>
     <% end %>
