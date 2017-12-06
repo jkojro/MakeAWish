@@ -20,7 +20,7 @@ class WishesController < ApplicationController
      
       
       @myanswer = Myanswer.new
-      @zm = @wish.querries
+      @myanswer.querry_id = @querry.id
       
       @myanswer.user_id = current_user.id
   end

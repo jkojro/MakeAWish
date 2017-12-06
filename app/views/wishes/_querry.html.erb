@@ -7,15 +7,29 @@
 		<p> querry id:
 		<%= querry.id %></p>
 		<h3>Twój strzał</h3>
-		<p> Tu będzie formularz</p>
+		<% @querry.id = querry.id %>
+		<p>TESTOWO: <%= @myanswer.querry %></p>
+		<%= render partial: 'querries/myanswer', collection: @querry.myanswers %>
+		
 
-		<%= form_for [ @wish, querry, @myanswer ] do |f| %>
+		<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
 		  <p>
+		
 		    <%= f.label :reply %><br/>
 		    <%= f.text_field :reply %>
 		  </p>
 		  <p>
 		    <%= f.submit 'Submit' %>
 		  </p>
+		<% end %>
+		
+		
+		
+		<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
+		<div>
+			<p> TU BĘdzie MYANSWER</p>
+		  <h4>MYANSWER --> <%= @myanswer.reply %></h4>
+ 
+		</div>
 		<% end %>
 </div>
