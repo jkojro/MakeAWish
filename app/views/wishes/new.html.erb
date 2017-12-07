@@ -9,7 +9,7 @@
 <table>
   <thead>
     <tr>
-      <th>Nazwa</th>
+      <th>Twórca</th>
       <th>Mój Wish</th>
 	  <th>Odbiorca</th>
       <th colspan="3"></th>
@@ -19,7 +19,7 @@
   <tbody>
     <% @wishes.each do |wish| %>
       <tr>
-        	<td><%= link_to wish.name, wish %></td>
+        	<td><%= link_to "Wish from  #{wish.user.name}", wish %></td>
 			<% if (wish.user == current_user) %>
 				<td><%= link_to wish.mywish, wish %></td>
 				<td><%= wish.reciever %></td>

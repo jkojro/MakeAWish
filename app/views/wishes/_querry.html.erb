@@ -8,6 +8,8 @@
 
 		<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
 		  <p>
+			  
+			  <% @myanswer.querry_id = querry.id %>
 		
 		    <%= f.label :reply, "Twój strzał:" %><br/>
 		    <%= f.text_field :reply %>
@@ -17,12 +19,14 @@
 		  </p>
 		<% end %>
 
-		<% @querry.myanswers.each do |myanswer| %>
+		<% querry.myanswers.reverse.each do |myanswer| %>
 		
-			<p>Twój strzał: <%= myanswer.reply %></p>
+			
 
-		    <% if (querry.answer == myanswer.reply) %>
-				<p>Brawo! Oto twoja wskazówka: <%= querry.tip %></p>
+		    <% if (querry.answer.downcase == myanswer.reply.downcase) %>
+				<h4>Brawo! Oto twoja wskazówka: <%= querry.tip %></h4>
+			<% else %>
+				<p>Twój strzał:<%= myanswer.reply %></p>
 			<% end %>
 		<% end %>
 	<% end %>
