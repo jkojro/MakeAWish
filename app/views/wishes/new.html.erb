@@ -21,7 +21,7 @@
       <tr>
         	<td><%= link_to "Wish from  #{wish.user.name}", wish %></td>
 			<% if (wish.user == current_user) %>
-				<td><%= link_to wish.mywish, wish %></td>
+				<td><%= link_to wish.mywish, wish, class: "btn btn-danger btn-outline" %></td>
 				<td><%= wish.reciever %></td>
         		<td><%= link_to 'Edytuj', edit_wish_path(wish) %></td>
         		<td><%= link_to 'Usuń', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
