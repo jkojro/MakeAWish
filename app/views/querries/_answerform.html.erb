@@ -1,10 +1,11 @@
 <h3>Twój strzał</h3>
 
 <%= form_for [ @wish, @querry, @myanswer ] do |f| %>
-  <p>
+
+  <div class="form-group">
     <%= f.label :reply %><br/>
-    <%= f.text_field :reply %>
-  </p>
+    <%= f.text_field :reply, autofocus: true, class: 'form-control' %>
+  <div>
   <p>
     <%= f.submit 'Submit' %>
   </p>

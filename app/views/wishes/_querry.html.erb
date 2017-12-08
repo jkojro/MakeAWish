@@ -7,13 +7,12 @@
 	<% else %>	
 
 		<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
-		  <p>
-			  
-			  <% @myanswer.querry_id = querry.id %>
+		<div class="form-group">  
+			<% @myanswer.querry_id = querry.id %>
 		
-		    <%= f.label :reply, "Twój strzał:" %><br/>
-		    <%= f.text_field :reply %>
-		  </p>
+		    <%= f.label :reply, "Twój strzał:"%><br/>
+		    <%= f.text_field :reply, class: 'form-control'  %>
+		 </div>
 		  <p>
 		    <%= f.submit 'Strzelaj' %>
 		  </p>
