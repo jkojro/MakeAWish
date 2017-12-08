@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.h1 {
-	color: #88b99f;
+
+a:link {
+    color: #cb2027 !important
 }
 
+a:hover {
+    color: #cb2027 !important
+}
 
-
-input[type="text"] {
-color: #b7797b;
+a:active {
+    color: #cb2027 !important
 }

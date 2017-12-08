@@ -1,27 +1,26 @@
-$link-color: #cb2027;
-$brand-primary: #cb2027;
+
+
+
 
 $body-bg: #88b99f;
 
 $navbar-default-bg: #88b99f;
 
-$navbar-default-brand-color: #cb2027;
+
 
 $navbar-default-border: #cb2027;
 
-$navbar-default-ink-color: #cb2027;
+$navbar-default-link-color: #cb2027;
 
 $navbar-padding: 30px;
 
 $panel-default-bg: #88b99f;
 
-$jumbotron-bg: #b7797b;
+$jumbotron-bg: #88b99f;
 
-$jumbotron-efault-border: #cb676b;
+$jumbotron-default-border: #cb676b;
 
-textarea.form-control {
-    color: #88b99f;
-}
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

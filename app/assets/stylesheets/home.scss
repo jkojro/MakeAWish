@@ -6,14 +6,26 @@ body {
     padding-top: 25px; 
 }
 
-.h1 {
-	color: #88b99f;
-}
-
-textarea{ 
-    background-color:#88b99f !important;
-}
 
 input[type="text"]{
 background-color:#88b99f !important
 }
+
+input[type="text"]{
+border-color:#cb2027 !important
+}
+
+a:link {
+    color: #cb2027 !important
+}
+
+a:hover {
+    
+	text-decoration: none;
+	color: #cb2027 !important
+}
+
+a:active {
+    color: #cb2027 !important
+}
+
