@@ -1,0 +1,159 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body { 
+    padding-top: 25px; 
+}
+
+
+input[type="text"]{
+background-color:#88b99f !important
+}
+
+a {
+//    color: #8a6f6f !important
+}
+
+input[type="text"]{
+border-color:#cb2027 !important
+}
+
+a:link {
+    color: #cb2027 !important
+}
+
+a:hover {
+    
+	text-decoration: none;
+	color: #cb2027 !important
+}
+
+a:active {
+    color: #cb2027 !important
+}
+
+/*Bootstrap button outline override*/
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+	margin: 10px 10px 10px 10px;
+
+
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+  h1 {
+   
+    font-size: 70px;
+	text-align: center;
+	padding: 30px;
+	color: #cb2027;   
+ }
+ 
+ h2 {
+    font-size: 50px;
+	text-align: center;
+	padding: 37px;
+	color: grey;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+ }
+ 
+ h3 {
+    font-size: 25px;
+	text-align: center;
+	padding: 20px;
+	color: grey;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+ }
+ 
+ h4 {
+    font-size: 20px;
+	text-align: center;
+	padding: 0px;
+	color: grey;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 100;
+ }
+ 
+.jumbotron {
+ 	width: 800px;
+	height: 650 px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+
+}
+
+.jumbotron-intro {
+ 	width: 50%;
+	max-width: 450px;
+	height: 300px;
+	max-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	background-color: #d5c5bf;
+	radius: 0 5px;
+}
+
+table, th, td, tr {
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0  30px 0 30px;
+}
+
+.credentials {
+	text-align: center;
+	font-size: 10px;
+}
+
+.box {
+
+	border: 0px solid black;
+	display: block;
+	margin: auto;
+ 	width: 800px;
+	min-height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+}
+
+
+

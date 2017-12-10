@@ -9,6 +9,9 @@ end
   devise_for :users
   root 'home#index'
   get 'home/wishlist'
+  get 'home/intro'
+  get 'home/sign'
+  get 'home/null'
 
 
 end

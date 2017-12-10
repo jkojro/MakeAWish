@@ -7,10 +7,10 @@
 		<p>
   		  <strong>Wish:</strong>
   			<%= @wish.mywish %>
-			<%= link_to 'Edit', edit_wish_path(@wish) %>
+			<%= link_to 'Edytuj', edit_wish_path(@wish) %>
 		</p>
 		<% if @wish.querries.size == 0 %>
-			<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, 				żeby 	Mikołaj nie miał zdbyt łatwo.</h3>
+			<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, żeby Mikołaj nie miał zdbyt łatwo.</h3>
 		<% else %>
 			<h3>Masz <%= @wish.querries.size %> pytania</h3>
 		<% end %>
