@@ -1,19 +1,13 @@
 <div >
 
 <% if user_signed_in? %>
-<div class="jumbotron">
-	
-<!-- <h4><%= link_to "To jest aplikacja wspomagająca pracę Św. Mikołaja." %> </h4> -->
-<h2><%= link_to "Zdecyduj kim jesteś." %> </h2>
-<table>
-		<tr>
-			<th><%= link_to "Jestem Świętym Mikołajem", 			wishes_path, 			class: "btn btn-danger btn-outline btn-lg"%></th>
-			<th><%= link_to "Chcę pomóc Świętemu Mikołajowi", 			new_wish_path,   class: "btn btn-danger btn-outline btn-lg"  %></th>
-		</tr>
-		
-</table>
 
+<div class="jumbotron">
+	<h1 style="opacity: 0.6;"><%= link_to "Make a Wish", home_intro_path %></h1>
 </div>
+
+
+
 
 <% else %>
 

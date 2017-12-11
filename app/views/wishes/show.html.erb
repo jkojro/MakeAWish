@@ -11,15 +11,20 @@
 		</p>
 		<% if @wish.querries.size == 0 %>
 			<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, żeby Mikołaj nie miał zdbyt łatwo.</h3>
-		<% else %>
+		<% elsif @wish.querries.size <3 %>
 			<h3>Masz <%= @wish.querries.size %> pytania</h3>
+			
+			<%= render partial: 'querries/form' %>
+		<% else %>
+					<h3>Dzięki! Twój Wish został zakodowany, Mikołaj będzie miał co robić.</h3>
+				
 		<% end %>
-				<%= render partial: 'querries/form' %>
+	
+	
+	
+		<%= render partial: 'wishes/querry', collection: @wish.querries %>
 	<% end %>
 	
-	
-
-	<%= render partial: 'wishes/querry', collection: @wish.querries %>
 
 <% end %>
 

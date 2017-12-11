@@ -20,7 +20,7 @@
 
 		
 		<% if user_signed_in? %>
-		 <li><%= link_to 'Od początku', root_path %></li>
+		 <li><%= link_to 'Make a Wish', root_path %></li>
 		<li> <%= link_to "Użytkownik: #{current_user.name}", edit_user_registration_path %></li>
 		<li><%= link_to 'Wyloguj', destroy_user_session_path, method: :delete %></li>
 		<% else %>

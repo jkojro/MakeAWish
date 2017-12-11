@@ -1,20 +1,17 @@
 
 <%= form_for [ @wish, @querry ] do |f| %>
-  <div clas="form-group">
-    <%= f.label :question, "Dodaj pytanie" %><br/>
-    <%= f.text_field :question, class:'form-control' %>
+  <div class="form-group">
+    <%= f.text_field :question, placeholder: "Dodaj pytanie", class:'form-control' %>
   </div>	  
-  	<div clas="form-group">
-   	 <%= f.label :answer, "Twoja odpowiedź" %><br/>
-   	 <%= f.text_field :answer, class:'form-control' %>
+  	<div class="form-group">
+   	 <%= f.text_field :answer, placeholder: "Twoja odpowiedź", class:'form-control' %>
 	</div>
 
-	<div clas="form-group">
-   	 <%= f.label :tip, "Zostaw Mikołajowi wskazówkę" %><br/>
-    	<%= f.text_field :tip, class:'form-control' %>
+	<div class="form-group">
+    	<%= f.text_field :tip, placeholder: "Zostaw Mikołajowi wskazówkę", class:'form-control' %>
   	</div>
 </br>
-  	<div clas="form-group">
+  	<div class="form-group">
    	 <%= f.submit 'Wrzucaj', class: 'btn btn-danger btn-sm' %>
   	</div>
 <% end %>
