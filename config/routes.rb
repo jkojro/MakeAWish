@@ -12,6 +12,7 @@ end
   get 'home/intro'
   get 'home/sign'
   get 'home/null'
+  get 'home/info'
 
 
 end

@@ -17,16 +17,23 @@
       <ul class="nav navbar-nav navbar-left">
 
        
-
+		
 		
 		<% if user_signed_in? %>
-		 <li><%= link_to 'Make a Wish', root_path %></li>
-		<li> <%= link_to "Użytkownik: #{current_user.name}", edit_user_registration_path %></li>
 		<li><%= link_to 'Wyloguj', destroy_user_session_path, method: :delete %></li>
+		<li> <%= link_to current_user.name, edit_user_registration_path %></li>
+		<li><%= link_to 'Od początku', root_path %></li>
+		
+		
 		<% else %>
-		<li><%= link_to 'Zaloguj', new_user_session_path %></li>
 		<li><%= link_to 'Rejestracja', new_user_registration_path %></li>
+		<li><%= link_to 'Zaloguj', new_user_session_path %></li>
 		<% end %>
+		
+		<li><%= link_to home_info_path do %>
+				<i class="fa fa-question-circle"></i>
+			<% end %>
+		</li>
   
  
       </ul>

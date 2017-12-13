@@ -1,7 +1,5 @@
-<p id="notice"><%= notice %></p>
 
-
-<% if ((@wish.user == current_user) || (@wish.reciever == current_user.name) || (@wish.reciever == current_user.fbname) || (wish.reciever == nil) ) %>
+<% if ((@wish.user == current_user) || (@wish.reciever.downcase == current_user.name.downcase) || (@wish.reciever.downcase == current_user.fbname.downcase) || (wish.reciever == nil) ) %>
 
 	<% if (@wish.user == current_user) %>
 		<p>
@@ -20,7 +18,7 @@
 				
 		<% end %>
 	
-	
+	<% else %>
 	
 		<%= render partial: 'wishes/querry', collection: @wish.querries %>
 	<% end %>
