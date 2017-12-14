@@ -17,12 +17,12 @@
       <tr>
         	<td><%= "Wish from  #{wish.user.name}" %></td>
 			<td><%= wish.reciever %></td>
-			<% if (wish.user == current_user) %>
+			
 				<td><%= wish.mywish %></td>
         		<td><%= link_to 'Show', wish %></td>
         		<td><%= link_to 'Edit', edit_wish_path(wish) %></td>
         		<td><%= link_to 'Destroy', wish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			<% end %>
+			
       </tr>
     <% end %>
   </tbody>
