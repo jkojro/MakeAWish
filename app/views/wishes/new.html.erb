@@ -9,9 +9,9 @@
 <table>
   <thead>
     <tr>
-      <th>Mój Wish</th>
-	  <th>Odbiorca</th>
-	  <th>Status</th>
+      <th><h4>Mój Wish</h4></th>
+	  <th><h4>Odbiorca</h4></th>
+	  <th><h4>Status</h4></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,8 +23,11 @@
 			<% if (wish.user == current_user) %>
 				<td><%= link_to wish.mywish, wish, class: "btn btn-danger btn-outline" %></td>
 				<td><%= wish.reciever %></td>
-        		<td><%= link_to 'Edytuj', edit_wish_path(wish) %></td>
-				
+				<% if wish.is_done? %>
+        			<td style="color: #cb2027;">'Santa was here!</td>
+				<% else %>
+					<td style="color: #cb2027;">Still waiting for the Santa.</td>
+				<% end %>
 				<td><%= link_to wish, method: :delete, data: { confirm: 'Are you sure?' } do %>
 						<i class="fa fa-trash"></i>
 					<% end %>

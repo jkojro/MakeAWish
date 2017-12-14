@@ -39,6 +39,7 @@ class WishesController < ApplicationController
   # POST /wishes.json
   def create
     @wish = current_user.wishes.build(wish_params)
+    @wish.isdone = false
 
     respond_to do |format|
       if @wish.save
@@ -70,7 +71,7 @@ class WishesController < ApplicationController
   def destroy
     @wish.destroy
     respond_to do |format|
-      format.html { redirect_to wishes_url, notice: 'Wish was successfully destroyed.' }
+      format.html { redirect_to new_wish_path, notice: 'Wish was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

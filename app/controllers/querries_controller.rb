@@ -3,6 +3,7 @@ class QuerriesController < ApplicationController
     def create
         @querry = Querry.new(querry_params)
         @querry.wish_id = params[:wish_id]
+        @querry.isdone = false
         
         @querry.save
         
