@@ -17,8 +17,6 @@ class WishesController < ApplicationController
       @querry = Querry.new
       @querry.wish_id = @wish.id
       
-     
-      
       @myanswer = Myanswer.new
       @myanswer.querry_id = @querry.id
       
@@ -39,7 +37,7 @@ class WishesController < ApplicationController
   # POST /wishes.json
   def create
     @wish = current_user.wishes.build(wish_params)
-    
+    @wish.isdone = false
 
     respond_to do |format|
       if @wish.save

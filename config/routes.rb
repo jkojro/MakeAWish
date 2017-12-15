@@ -13,6 +13,7 @@ end
   get 'home/sign'
   get 'home/null'
   get 'home/info'
+  get 'home/about'
 
 
 end

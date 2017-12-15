@@ -1,41 +1,39 @@
 
-<% if ((@wish.user == current_user) || (@wish.reciever.downcase == current_user.name.downcase) || (@wish.reciever.downcase == current_user.fbname.downcase) || (wish.reciever == nil) ) %>
+<% if ((@wish.user == current_user) || (@wish.reciever.downcase == current_user.name.downcase) || (@wish.reciever.downcase == current_user.fbname.downcase) || (wish.reciever.blank?) ) %>
 
 	<% if (@wish.user == current_user) %>
-		<p>
-  		  <strong>Wish:</strong>
-  			<%= @wish.mywish %>
-			<%= link_to 'Edytuj', edit_wish_path(@wish) %>
-		</p>
-		<% if @wish.querries.size < 3 %>
-			<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, żeby Mikołaj nie miał zdbyt łatwo.</h3>
-	
-			<h3>Masz <%= @wish.querries.size %> pytania</h3>
-			<p>wish status: <%= @wish.isdone? %></p>
-			<p>q1: <%= @wish.querries.first.isdone? %></p>
-			<p>q2: <%= @wish.querries.second.isdone? %></p>
-			<p>q3: <%= @wish.querries.last.isdone? %></p>
-			
-			<%= render partial: 'querries/form' %>
-			
-		<% else %>
-					<h3>Dzięki! Twój Wish został zakodowany, Mikołaj będzie miał co robić.</h3>
-				
+		<%= link_to @wish.mywish, @wish, class: "btn btn-danger btn-outline" %>
+		<% case @wish.querries.size when 0 %>
+				<h3>Właśnie powstał tu nowy Wish! Schowaj go pod kilkoma pytaniami, żeby Mikołaj nie miał zdbyt łatwo.</h3>
+				<%= render partial: 'querries/form' %>
+			<% when 1 %>
+				<h3>Możesz dodać jeszcze dwa pytania.</h3>
+				<%= render partial: 'querries/form' %>
+				<%= render partial: 'wishes/querry', collection: @wish.querries %>	
+			<% when 2 %>
+				<h3>Możesz dodać jeszcze jedno pytanie.</h3>
+				<%= render partial: 'querries/form' %>
+				<%= render partial: 'wishes/querry', collection: @wish.querries %>		
+			<% when 3 %>
+					<% if (@wish.is_done?) %>
+						<h3 style="color: #cb2027; font-size: 40px">Wygląda na to, że Św. Mikołaj już tu był!</h3>
+					<% else %>
+						<h3>Dzięki! Twój Wish został zakodowany, Mikołaj będzie miał co robić.</h3>		
+					<%= render partial: 'wishes/querry', collection: @wish.querries %>	
+					<% end %>
 		<% end %>
 	
 	<% else %>
-		
-		<% if ((@wish.querries.first.isdone?) && (@wish.querries.second.isdone?) && (@wish.querries.last.isdone?)) %>
+	
+		<% if (@wish.is_done?) %>
 			<h3 style="color: #cb2027;">Brawo! Już nic nie stoi Ci na drodze by zostać Św. Mikołajem</h3>
-			<h2 style="color: #cb2027;"> <%= @wish.user.name %> marzy by dostać <%= @wish.mywish %></h2>
+			<h2 style="color: #cb2027;"> <%= @wish.user.name %> marzy, by dostać <%= @wish.mywish %></h2>
 		<% else %>
 			<%= render partial: 'wishes/querry', collection: @wish.querries %>
 		<% end %>
 	<% end %>
-
 <% end %>
 
-<%= link_to 'Powrót', root_path %>
 
 
 		  

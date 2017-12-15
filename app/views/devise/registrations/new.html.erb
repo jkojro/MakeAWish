@@ -10,18 +10,18 @@
   </div>
 
   <div class="form-group">
-    <%= f.email_field :email, placeholder: "Email", autofocus: true, class: 'form-control' %>
+    <%= f.email_field :email, placeholder: "Email. Szanujemy Twoją prywatność, nie musi być prawdziwy.", autofocus: true, class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <% if @minimum_password_length %>
     <em>(Minimum <%= @minimum_password_length %> znaków)</em>
     <% end %><br />
-    <%= f.password_field :password, placeholder: "Hasło", autocomplete: "off", class: 'form-control' %>
+    <%= f.password_field :password, placeholder: "Hasło, ono musi być prawdziwe.", autocomplete: "off", class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.password_field :password_confirmation, placeholder: "Potwierdź hasło", autocomplete: "off", class: 'form-control' %>
+    <%= f.password_field :password_confirmation, placeholder: "Musisz też naprawdę hasło potwierdzić.", autocomplete: "off", class: 'form-control' %>
   </div>
 
   <div class="actions">
