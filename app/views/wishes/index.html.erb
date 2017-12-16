@@ -5,7 +5,7 @@
   <tbody>
     <% @wishes.each do |wish| %>
      
-			<% if ((wish.reciever == current_user.name) || (wish.reciever == current_user.fbname)) %>
+			<% if ((wish.reciever == current_user.name) || (wish.reciever == current_user.email)) %>
 				<%= link_to "Wish from  #{wish.user.name}", wish, class: "btn btn-danger btn-outline"  %></td>
 			<% end %>	
     
