@@ -1,5 +1,4 @@
-
-<% if ((@wish.user == current_user) || (@wish.reciever.downcase == current_user.name.downcase) || (@wish.reciever.downcase == current_user.fbname.downcase) || (wish.reciever.blank?) ) %>
+<% if ((@wish.user == current_user) || (@wish.reciever.downcase == current_user.name.downcase) ||  (wish.reciever.blank?) ) %>
 
 	<% if (@wish.user == current_user) %>
 		<%= link_to @wish.mywish, @wish, class: "btn btn-danger btn-outline" %>

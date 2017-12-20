@@ -3,16 +3,11 @@ class WishesController < ApplicationController
   before_action :authenticate_user!, exept: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-  # GET /wishes
-  # GET /wishes.json
+
   def index
     @wishes = Wish.all
   end
 
-
-
-  # GET /wishes/1
-  # GET /wishes/1.json
   def show
       @querry = Querry.new
       @querry.wish_id = @wish.id
@@ -23,18 +18,15 @@ class WishesController < ApplicationController
       @myanswer.user_id = current_user.id
   end
 
-  # GET /wishes/new
   def new
       @wishes = Wish.all
     @wish = current_user.wishes.build
   end
 
-  # GET /wishes/1/edit
+
   def edit
   end
 
-  # POST /wishes
-  # POST /wishes.json
   def create
     @wish = current_user.wishes.build(wish_params)
     @wish.isdone = false
@@ -50,8 +42,6 @@ class WishesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /wishes/1
-  # PATCH/PUT /wishes/1.json
   def update
     respond_to do |format|
       if @wish.update(wish_params)
@@ -64,8 +54,6 @@ class WishesController < ApplicationController
     end
   end
 
-  # DELETE /wishes/1
-  # DELETE /wishes/1.json
   def destroy
     @wish.destroy
     respond_to do |format|

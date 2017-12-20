@@ -10,18 +10,7 @@
 			<h4 style="color: red; font-size: 20px; opacity: 0.7;">Brawo!  Przejdź do kolejnego pytania.</h4>
 			<% else %>
 		
-			<%= form_for [ @wish, @querry, @myanswer ] do |f| %>
-				<div class="form-group">  
-					<% @myanswer.querry_id = querry.id %>
-		
-		    		<%= f.label :reply, "Twój strzał:"%><br/>
-		    		<%= f.text_field :reply, class: 'form-control'  %>
-		 		</div>
-				  <p>
-		   	 		 <%= f.submit 'Strzelaj', class: 'btn btn-danger btn-sm' %>
-
-				  </p>
-			<% end %>
+			<%= render partial: 'querries/answerform' %>
 			<% if querry.myanswers.size > 2 %>
 				<h4 style="text-align:left;">Może wskazówkę? <%= querry.tip %></h4>
 			<% end %>
@@ -34,8 +23,7 @@
 		<% end %>
 		
 	<% end %>
-		
-<!-- <%= render partial: 'querries/myanswer', collection: @querry.myanswers %> -->
+
 		
 	
 			

@@ -2,8 +2,6 @@
 
 <%= render 'form', wish: @wish %>
 
-
-
 <h2><%= link_to "Lista moich Wishów" %></h2>
 
 <table>
@@ -15,11 +13,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @wishes.each do |wish| %>
-      <tr>
-			
+      <tr>	
 			<% if (wish.user == current_user) %>
 				<td><%= link_to wish.mywish, wish, class: "btn btn-danger btn-outline" %></td>
 				<td><%= wish.reciever %></td>
