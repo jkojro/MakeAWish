@@ -5,7 +5,4 @@ class HomeController < ApplicationController
   def wishlist
       @wishes = Wish.all
   end
-  
-
-
 end

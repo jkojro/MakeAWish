@@ -1,7 +1,6 @@
 class MyanswersController < ApplicationController
     
     def new
-      
     end
     
     def create

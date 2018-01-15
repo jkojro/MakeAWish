@@ -3,7 +3,6 @@ class WishesController < ApplicationController
   before_action :authenticate_user!, exept: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-
   def index
     @wishes = Wish.all
   end
@@ -63,12 +62,11 @@ class WishesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_wish
       @wish = Wish.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def wish_params
       params.require(:wish).permit(:name, :mywish, :user_id, :reciever)
     end
