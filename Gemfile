@@ -29,8 +29,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 group :development, :test do
 
   gem 'byebug', platform: :mri
+
+  gem 'rspec-rails', '~> 3.8'
   
-    gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :development do
